@@ -3,7 +3,9 @@ import React from "react";
 import { useErrorStore, useValueStore } from "./store";
 import { debounce } from "@/app/utils/debounce";
 
-const i32 = 4294967295; // MAX 32 bit number
+const MAX_SAFE_INTEGER = 4294967295; // MAX 32 bit number
+
+//const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER;
 
 const CalculatorInput = () => {
   const { value, setValue, setKeyActive } = useValueStore();
@@ -27,7 +29,7 @@ const CalculatorInput = () => {
 
     const _inputValue = Math.floor(Number(e.currentTarget.value)); // coerse to number type
 
-    if (_inputValue > i32) {
+    if (_inputValue > MAX_SAFE_INTEGER) {
       setError(
         `Wow! This is a really BIG number. This application starts to struggle numbers greater than 32BIT. But Hey!, finding prime numbers upto 4.3 Billion is still pretty good. The maximum number we can handle is ${i32} `,
       );

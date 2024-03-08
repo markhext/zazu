@@ -22,14 +22,14 @@ export default function Home() {
           </div>
         </section>
         <aside className="flex flex-col justify-center">
-          <div className="max-h-[32rem]  w-full rounded-lg shadow-2xl">
+          <div className="w-full rounded-lg shadow-2xl">
             <CalculatorNotifications>
               <Calculator>
                 <div className="pb-3">
                   <CalculatorPrimeLabel />
                 </div>
                 <CalculatorInput />
-                <div className="mt-3 grid grid-cols-2 rounded-md border-2 border-fuchsia-400 p-3 py-3 text-sm shadow-md">
+                <div className="mt-6 grid grid-cols-2 rounded-md border-2 border-fuchsia-400 p-3 py-3 text-sm shadow-md">
                   <CalculatorPreviousPrime />
                   <CalculatorNextPrime />
                 </div>
