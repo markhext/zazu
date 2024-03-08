@@ -31,7 +31,7 @@ const CalculatorInput = () => {
 
     if (_inputValue > MAX_SAFE_INTEGER) {
       setError(
-        `Wow! This is a really BIG number. This application starts to struggle numbers greater than 32BIT. But Hey!, finding prime numbers upto 4.3 Billion is still pretty good. The maximum number we can handle is ${i32} `,
+        `Wow! This is a really BIG number. This application starts to struggle numbers greater than 32BIT. But Hey!, finding prime numbers upto 4.3 Billion is still pretty good. The maximum number we can handle is ${MAX_SAFE_INTEGER} `,
       );
       return;
     }
