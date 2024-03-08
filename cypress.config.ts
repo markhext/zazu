@@ -2,6 +2,8 @@ import { defineConfig } from "cypress";
 import path from "path";
 
 export default defineConfig({
+  viewportWidth: 1536,
+  viewportHeight: 960,
   component: {
     devServer: {
       framework: "next",
@@ -17,6 +19,7 @@ export default defineConfig({
   },
 
   e2e: {
+    baseUrl: "http://localhost:3000",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },

@@ -43,6 +43,7 @@ const CalculatorInput = () => {
   return (
     <>
       <input
+        id="prime-input"
         onChange={onChange}
         autoFocus
         onKeyUp={debounce(() => setKeyActive(false), 500)}
