@@ -58,3 +58,21 @@ const MAX_SAFE_INTEGER = 4294967295; // MAX 32 bit number
 
 //const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER // MAX 64 bit number;
 ```
+
+## Testing with Cypress
+
+You must ensure the local dev environment is running:
+
+```
+pnpm dev
+
+```
+
+Open another terminal tab and run the cypress script:
+
+```
+pnpm cy:open
+
+```
+
+This will open the Cypress E2E test environment. Tests for this application are in the file called `prime-numbers` - click to run tests

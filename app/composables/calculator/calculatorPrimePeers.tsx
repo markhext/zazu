@@ -3,6 +3,7 @@
 import { nextPrime, previousPrime } from "@/app/utils/primeNumber";
 import { useValueStore } from "./store";
 import { useCallback } from "react";
+import { PeerPrime, PeerPrimeValue } from ".";
 
 export const CalculatorNextPrime = () => {
   const { value, keyActive } = useValueStore();
@@ -14,12 +15,9 @@ export const CalculatorNextPrime = () => {
   }, [value, keyActive]);
 
   return (
-    <dl className="h-12">
-      <dt>Next prime:</dt>
-      <dd>
-        <strong className="text-lg">{getNextPrime()}</strong>
-      </dd>
-    </dl>
+    <PeerPrime id="next-prime-number" label="Next prime">
+      <PeerPrimeValue>{getNextPrime()}</PeerPrimeValue>
+    </PeerPrime>
   );
 };
 
@@ -33,11 +31,8 @@ export const CalculatorPreviousPrime = () => {
   }, [value, keyActive]);
 
   return (
-    <dl className="h-12">
-      <dt>Previous prime:</dt>
-      <dd>
-        <strong className="text-lg">{getPreviousPrime()}</strong>
-      </dd>
-    </dl>
+    <PeerPrime id="previous-prime-number" label="Previous prime">
+      <PeerPrimeValue>{getPreviousPrime()}</PeerPrimeValue>
+    </PeerPrime>
   );
 };

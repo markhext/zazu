@@ -5,7 +5,13 @@ import { useValueStore } from "./store";
 
 const CalculatorPrimeLabel = () => {
   const { isPrime } = useValueStore();
-  return <Badge variant={isPrime ? "secondary" : "strike"}>PRIME</Badge>;
+  return (
+    <div className="h-6">
+      <Badge variant={isPrime ? "prime" : "default"} id="prime-badge">
+        {isPrime ? "THIS IS A PRIME NUMBER" : "THIS IS NOT A PRIME NUMBER"}
+      </Badge>
+    </div>
+  );
 };
 
 export default CalculatorPrimeLabel;
